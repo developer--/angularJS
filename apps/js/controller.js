@@ -1,3 +1,4 @@
+
 angular.module('myApp.controllers',[]).
 controller('CurrencyController',function($scope){
 
@@ -29,3 +30,18 @@ controller('CurrencyController',function($scope){
 	}
 
 });
+
+
+/* hello on three languages (onclick)*/
+
+/*
+angular.module('myApp.controllers',[]).
+controller('GreetingController', function($scope){
+	$scope.now = new Date();
+	$scope.helloMessage = ['გამარჯობა', 'Hello', 'olla'];
+	$scope.greeting = $scope.helloMessage[0];
+	$scope.getRandomMessage = function() {
+		$scope.greeting = $scope.helloMessage[parseInt(( Math.random() * $scope.helloMessage.length ))];
+	}
+});
+*/
