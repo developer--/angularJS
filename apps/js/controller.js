@@ -1,6 +1,6 @@
 angular.module('myApp.controllers',[]).
 controller('CurrencyController',function($scope){
-	
+
 	$scope.USD = 0;
 	$scope.GEL = 0;
 	$scope.usd_to_euro = 0;
@@ -16,7 +16,7 @@ controller('CurrencyController',function($scope){
 		return $scope.GEL / 2.3258;
 	} 
 	$scope.USD_to_EURO = function() {
-		return $scope.usd_to_euro * 2.6128;
+		return $scope.usd_to_euro * 1.1428;
 	}
 	$scope.EURO_to_USD = function() {
 		return $scope.euro_to_usd / 2.3258;
