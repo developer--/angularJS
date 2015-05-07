@@ -4,15 +4,28 @@
 		<title>My First AngularJS App</title>
 		<link rel="stylesheet" type="text/css" href="style/site.css">
 	</head>
-	<body ng-controller="FinanceController">
+	<body ng-controller="CurrencyController">
 		<div id="container">
 			<header>
-
+				<article><h1> AngularJS </h1></article>
 			</header>
 			<main>
-				<label>salary </label> <input type="text" ng-model="salary"><br>
-				<label>DGG </label> <input type="text" ng-model="percentage">
-				<label>Result</label> {{ result() | currency}}
+				<section>
+					<div id="convert-side">
+						<label> USD </label> <input type="text" ng-model="USD"><label>GEL</label> {{ USD_to_GEL() }}<br><br>
+						<label> GEL </label> <input type="text" ng-model="GEL"><label>USD</label> {{ GEL_to_USD() | currency}}
+					</div>
+				</section>
+				<section>
+					<div id="valute_to_valute">
+						<label> USD to EURO</label> <input type="text" ng-model="usd_to_euro"><label>EURO</label> {{ USD_to_EURO() | currency}}
+						<br><br>
+						<label> EURO to GEL</label> <input type="text" ng-model="euro_to_gel"><label>GEL</label> {{ EURO_to_GEL() }} 
+						<br><br>
+						<label> GEL to EURO </label> <input type="text" ng-model="gel_to_euro"><label>EURO</label> {{ GEL_to_EURO() | currency}}<br><br>
+						<label> EURO to USD </label> <input type="text" ng-model="euro_to_usd"><label>USD</label> {{ GEL_to_USD() | currency}}<br><br>
+					</div>
+				</section>
 			</main>
 			<footer>
 				<script src="apps/source/angular.min.js"></script>
